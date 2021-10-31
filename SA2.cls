@@ -69,8 +69,7 @@ End Sub
 
 Sub AllStocksAnalysis()
 
-'Format the output sheet on the "All Stocks Analysis" worksheet.
-    
+
     Worksheets("All Stock Analysis").Activate
 
     Range("A1").Value = "All Stocks (2018)"
@@ -142,5 +141,37 @@ Sub AllStocksAnalysis()
     Next i
     
 End Sub
+
+Sub FormatAllStockAnalysisTable()
+
+Worksheets("All Stock Analysis").Activate
+    'formatting the table
     
+    Range("A1").Font.Bold = True
+    Range("A3:C3").Font.Bold = True
+    Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
+    Range("B4:B15").NumberFormat = "$#,##0"
+    Range("C4:C15").NumberFormat = "0.00%"
+    Columns("B").AutoFit
     
+    dataRowStart = 4
+    dataRowEnd = 15
+    
+    For i = dataRowStart To dataRowEnd
+        'Color cell green for Positive Return
+        If Cells(i, 3) > 0 Then
+            Cells(i, 3).Interior.Color = vbGreen
+        'Color cell red for Negative Return
+        ElseIf Cells(i, 3) < 0 Then
+            Cells(i, 3).Interior.Color = vbRed
+        Else
+            Cells(i, 3).Interior.Color = xlNone
+        End If
+    
+    Next i
+    
+        
+End Sub
+
+
+
