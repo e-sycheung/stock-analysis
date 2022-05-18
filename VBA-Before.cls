@@ -69,10 +69,17 @@ End Sub
 
 Sub AllStocksAnalysis()
 
+Dim startTime As Single
+Dim endTime As Single
 
-    Worksheets("All Stock Analysis").Activate
 
-    Range("A1").Value = "All Stocks (2018)"
+yearValue = InputBox("What year would you like to run analysis on?")
+
+    startTime = Timer
+    
+    Sheets("All Stock Analysis").Activate
+
+    Range("A1").Value = "All Stocks (" + yearValue + ")"
     
     'Create header row
     Cells(3, 1).Value = "Ticker"
@@ -101,7 +108,8 @@ Sub AllStocksAnalysis()
     Dim endingPrice As Single
 
     'Activate the data worksheet.
-    Worksheets("2018").Activate
+    Sheets(yearValue).Activate
+    
     
     'Find the number of rows to loop over.
     RowCount = Cells(Rows.Count, "A").End(xlUp).Row
@@ -113,7 +121,7 @@ Sub AllStocksAnalysis()
         ticker = tickers(i)
         totalVolume = 0
         
-        Worksheets("2018").Activate
+        Sheets(yearValue).Activate
         
         For j = 2 To RowCount
         
@@ -140,10 +148,6 @@ Sub AllStocksAnalysis()
         
     Next i
     
-End Sub
-
-Sub FormatAllStockAnalysisTable()
-
 Worksheets("All Stock Analysis").Activate
     'formatting the table
     
@@ -170,7 +174,16 @@ Worksheets("All Stock Analysis").Activate
     
     Next i
     
+    endTime = Timer
+    MsgBox "This code ran in " & (endTime - startTime) & " seconds for the year " & (yearValue)
+    
         
+End Sub
+
+Sub ClearWorksheet()
+
+    Cells.Clear
+    
 End Sub
 
 
