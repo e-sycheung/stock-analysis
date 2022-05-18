@@ -6,7 +6,7 @@ Create a script in VBA to iterated through a stock data to analyze for to assist
 ### Process:
 1. Create variables for ticker elements. 
 2. Assign variables are the proper data types. 
-3. Create a for loop and if/then statement to iterate over all the rows to calculate each ticker’s “Total Daily Volume” and “Return”
+3. Create a for loop and if/then statement to iterate over all the rows to calculate each tickerâ€™s â€œTotal Daily Volumeâ€ and â€œReturnâ€
 4. Format the table to emphasize positive and negative returns. 
 
 ## Resources
@@ -26,10 +26,10 @@ Although the program gave the desired output, the client wished to apply it to a
 <img src=" " style=" width: 385px; height: 250px">
 
 
-For the refactoring process, separate “for loops” were created for each task. The nested “for loops” in the initial program created an elongated cascading step-process to be complete before iterating over the next row of data.
+For the refactoring process, separate â€œfor loopsâ€ were created for each task. The nested â€œfor loopsâ€ in the initial program created an elongated cascading step-process to be complete before iterating over the next row of data.
 
 Refactored Steps:
-- Initializing tickerVolume variable to 0.
+- Initializing tickerVolumes variable to 0.
 - Indexing the tickers. 
 - Output calculated values.
 
