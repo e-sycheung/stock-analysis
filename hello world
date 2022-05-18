@@ -1,7 +1,0 @@
-Sub MacroCheck()
-
-Dim testmessage As String
-testmessage = "Hello World!"
-MsgBox (testmessage)
-
-End Sub
