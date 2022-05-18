@@ -18,12 +18,12 @@ Create a script in VBA to iterated through a stock data to analyze for to assist
 
 Initially the timing output before a refactoring process was the following: 
 
-<img src=" " style=" width: 385px; height: 250px">
+<img src="https://github.com/e-sycheung/stock-analysis/blob/main/analysis_img/init_output.jpg" style=" width: 485px; height: 150px">
 
 
 Although the program gave the desired output, the client wished to apply it to a larger data set and raised concerns about the execution time for different systems.
 
-<img src=" " style=" width: 385px; height: 250px">
+<img src="https://github.com/e-sycheung/stock-analysis/blob/main/analysis_img/final_output.jpg" style=" width: 685px; height: 350px">
 
 
 For the refactoring process, separate “for loops” were created for each task. The nested “for loops” in the initial program created an elongated cascading step-process to be complete before iterating over the next row of data.
@@ -31,14 +31,15 @@ For the refactoring process, separate “for loops” were created for each task
 Refactored Steps:
 - Initializing tickerVolumes variable to 0.
 - Indexing the tickers. 
-- Output calculated values.
+- Output the calculated values.
 
 ### Analysis:
 
 Refactor or Not to Refactor?
 
 The final script accomplished the goals of the project. Although refactoring created efficiency, not every situation benefits from this process. In large integrated system, refactoring and improving one area can create adverse effect in another and break the system. Sometime the original script is needed so that the many cogwheels of the entire machine can run properly and effectively.
-For the stock analysis on the new data set, the new data should be evaluated to ensure that format could still be processed by the script changes. The original and refactored script can be tested and edited to reveal the best approach for the desired output. 
+
+For the stock analysis on the new data set, the data should be evaluated to ensure that format could still be processed by the script changes. The original and refactored script can be tested and edited to reveal the best approach for the desired output. 
 
 
 
