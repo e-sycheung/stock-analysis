@@ -1,12 +1,12 @@
 # Stock Analysis
 
 ## Project Overview
-Create a script in VBA to iterated through a stock data to analyze for to assist the client and his parents to make better investments. Refactor the program to ensure that it can timely analyze larger data sets. 
+Create a script in VBA to iterate through  stock data. Refactor the program to ensure that it can analyze larger data sets in a timely manner. 
 
 ### Process:
 1. Create variables for ticker elements. 
-2. Assign variables are the proper data types. 
-3. Create a for loop and if/then statement to iterate over all the rows to calculate each ticker’s “Total Daily Volume” and “Return”
+2. Assign variable data types. 
+3. Create a for loop with nested if/then statement to iterate over all the rows to calculate each ticker’s “Total Daily Volume” and “Return”.
 4. Format the table to emphasize positive and negative returns. 
 
 ## Resources
@@ -37,7 +37,7 @@ Refactored Steps:
 
 Refactor or Not to Refactor?
 
-The final script accomplished the goals of the project. Although refactoring created efficiency, not every situation benefits from this process. In large integrated system, refactoring and improving one area can create adverse effect in another and break the system. Sometime the original script is needed so that the many cogwheels of the entire machine can run properly and effectively.
+The final script accomplished the goals of the project. Although refactoring created efficiency, not every situation benefits from this process. In a large integrated system, refactoring and improving one area can create adverse effects in another and break the system. Sometimes the original script is needed so that the many cogwheels of the entire machine can run properly and effectively.
 
 For the stock analysis on the new data set, the data should be evaluated to ensure that format could still be processed by the script changes. The original and refactored script can be tested and edited to reveal the best approach for the desired output. 
 
